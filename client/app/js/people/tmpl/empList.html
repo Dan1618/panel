@@ -1,0 +1,17 @@
+<td>
+   {{ emp.name }}
+</td>
+<td>
+   {{ emp.surname }}
+</td>
+<td>
+   {{ emp.job }}
+</td>
+<td>
+   {{ emp.loc }}
+</td>
+<td>
+    <button ui-sref=".empInfo" ng-click="mainctrl.showEmpInfo(emp);" class="glyphicon glyphicon-user btn btn-info"></button>
+    <button ng-click="mainctrl.editEmp(emp)" class="glyphicon glyphicon-pencil btn btn-primary"></button>
+    <button ng-click="mainctrl.removeEmp(emp);" class="glyphicon glyphicon-remove btn btn-danger"></button>
+</td>

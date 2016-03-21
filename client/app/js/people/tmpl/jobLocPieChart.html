@@ -1,0 +1,16 @@
+<div class="form-group">
+    <select ng-model="selectLocJob" class="form-control" ng-init="selectLocJob='loc'">
+        <option value="loc">Localisation</option>
+        <option value="job">Job</option>
+    </select>
+</div>
+<div ng-if="selectLocJob=='loc'" >
+    <canvas class="chart chart-pie" data="mainctrl.dataChartLoc"
+      labels="mainctrl.labelsChartLoc" legend="true" options="mainctrl.pieChartOptions"></canvas> 
+</div>
+<div ng-if="selectLocJob=='job'" >
+    <canvas class="chart chart-pie" data="mainctrl.dataChartJob"
+      labels="mainctrl.labelsChartJob" legend="true" options="mainctrl.pieChartOptions"></canvas>
+</div>
+
+

@@ -1,0 +1,13 @@
+[    {"name" : "Jan", "surname" : "Aa", "job" : "manager", "loc" : "Poznan"},
+    {"name" : "Marian", "surname" : "Ab", "job" : "salesman", "loc" : "Wroclaw"},
+    {"name" : "Sylwia", "surname" : "Cc", "job" : "manager", "loc" : "Rzeszow"},
+{"name" : "Mieczyslawa", "surname" : "Dc", "job" : "salesman", "loc" : "Poznan"},
+{"name" : "Jan", "surname" : "Da", "job" : "salesman", "loc" : "Rzeszow"},
+{"name" : "Renata", "surname" : "Dd", "job" : "director", "loc" : "Rzeszow"},
+{"name" : "Marek", "surname" : "Ef", "job" : "director", "loc" : "Poznan"},
+{"name" : "Julia", "surname" : "Fg", "job" : "salesman", "loc" : "Rzeszow"},
+{"name" : "Jan", "surname" : "Fh", "job" : "director", "loc" : "Wroclaw"},
+{"name" : "Jan", "surname" : "Fh", "job" : "accountant", "loc" : "Poznan"},
+{"name" : "Jan", "surname" : "Fh", "job" : "accountant", "loc" : "Rzeszow"},
+{"name" : "Jan", "surname" : "Fh", "job" : "accountant", "loc" : "Torun"},
+{"name" : "Jan", "surname" : "Fh", "job" : "accountant", "loc" : "Torun"}]

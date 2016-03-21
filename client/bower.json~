@@ -1,0 +1,19 @@
+{
+  "name": "DM-angular-seed",
+  "version": "0.1.0",
+  "authors": [
+    "Daniel Malek"
+  ],
+  "description": "Seed for new angular applications",
+  "license": "MIT",
+  "ignore": [
+
+  ],
+  "dependencies": {
+    "angular": "~1.4.0-rc.2",
+    "angular-ui-router": "~0.2.13",
+    "bootstrap": "3.3.1",
+    "Chart.js": "1.0.2",
+    "angular-chart" :"0.7.2"
+  }
+}

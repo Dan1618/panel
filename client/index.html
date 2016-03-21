@@ -1,0 +1,63 @@
+<!doctype html>
+<html ng-app="myApp">
+<head>
+  <title>CTF</title>
+    
+    <!--build:css css/lib.css-->
+    <!--bower:css-->
+      <link rel="stylesheet" href="css/bootstrap.min.css"/>
+      <link rel="stylesheet" href="angular-chart/dist/angular-chart.css">
+    <!--endbower -->
+    <!--endbuild -->
+    
+    <!--build:css css/app.css-->
+    <!-- inject:css -->
+      <link rel="stylesheet" href="css/style.css"/>
+    <!-- endinject -->
+    <!-- endbuild -->
+    
+    <!--build:css js/lib.js-->
+    <!--bower:js -->
+      <script src="angular/angular.min.js"></script>
+      <script src="angular-ui-router/release/angular-ui-router.min.js"></script>
+      <script src="Chart.js/Chart.min.js"></script>
+      <script src="angular-chart/dist/angular-chart.min.js"></script>
+    <!--endbower -->
+    <!--endbuild -->
+    
+    <!--build:css js/app.js-->
+    <!-- inject:js -->
+      <script src="js/ngApp.js"></script>
+      <script src="js/people/people.ctrl.js"></script>
+      <script src="js/people/list.directive.js"></script>
+      <script src="js/people/workerwindow.directive.js"></script>
+      <script src="js/people/jobLocPieChart.directive.js"></script>
+      <script src="js/people/jobLocBarChart.directive.js"></script>
+      <script src="js/people/countJobLocPieChart.factory.js"></script>
+      <script src="js/statistics/frame.directive.js"></script>
+      <script src="js/people/dataService.factory.js"></script>
+      <script src="js/statistics/stats.ctrl.js"></script>
+    <!-- endinject -->
+    <!-- inject:templates:js -->
+    <!-- endinject -->
+    <!--endbuild -->
+</head>
+<body>
+    
+    <div class="container-fluid">
+        <div class="main-nav row">
+            <div class="col-md-6 col-sm-12 col-xs-12 col-lg-6">
+                <ul class="nav nav-pills nav-justified">
+                  <li role="presentation" class="active"><a class="glyphicon glyphicon-user" ui-sref="main"> People</a></li>
+                  <li role="presentation"><a class="glyphicon glyphicon-stats" ui-sref="statistics"> Statistics</a></li>
+                  <li role="presentation"><a class="glyphicon glyphicon-screenshot" ui-sref="other"> Others</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div ui-view>
+    
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,14 @@
+
+<div class="panel panel-default" ng-class="{'panel-primary':frameEditedFlag}">
+    <div ng-if="!frameEditedFlag" class="panel-heading">
+        {{ headerTittle }}
+        <i ng-click="mainctrl.frameCollapseFlag(flagname)" class="pointer pull-right glyphicon glyphicon-minus"></i>
+    </div>    
+    <div ng-if="frameEditedFlag" class="panel-heading">
+        {{ 'Edit: '+mainctrl.emp.name+' '+mainctrl.emp.surname  }}
+        <i ng-click="mainctrl.frameCollapseFlag(flagname)" class="pointer pull-right glyphicon glyphicon-minus"></i>
+    </div>
+    <div ng-show="mainctrl[flagname]" class="panel-body">
+        <div ng-transclude></div>
+    </div>
+</div>
