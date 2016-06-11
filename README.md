@@ -5,7 +5,7 @@ Admin panel app made with mongodb, express, nodejs, angularjs and twitter bootst
 
 FIREING UP THE APP:
 
-0. you have to install mongodb v 3.2.0
+0. install mongodb v 3.2.0
 1. bower install in client folder
 2. npm install in server folder
 3. run server.js as following: (with inspector and nodemon globally installed)
