@@ -18,7 +18,6 @@ angular.module('myApp').directive('flowChart', function () {
             }
             $scope.ocw = json;
             $scope.onClick = function (points, evt) {
-                console.log(points, evt);
             };
             
             
@@ -46,7 +45,6 @@ angular.module('myApp').directive('flowChart', function () {
             };
             
             $scope.resetFlowChart = function(){
-                console.log($scope.ocw.data);
                 $scope.ocw.data[0]=[''];
                 $scope.ocw.data[1]=[''];
                 $scope.ocw.labels = ["1"];

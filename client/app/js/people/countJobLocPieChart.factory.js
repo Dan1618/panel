@@ -1,5 +1,5 @@
 //factory counting jobs and locations
-angular.module('myApp').factory('CountJobLocPieChart', ['$http', 'URL', function ($http, URL) {
+angular.module('myApp').factory('CountJobLocPieChart', ['URL', function (URL) {
     var dataCount = function(emps){
         var locTab = [0,0,0,0];
         var jobTab = [0,0,0,0];

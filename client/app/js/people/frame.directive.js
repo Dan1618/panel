@@ -1,7 +1,6 @@
 //piechart directive
 angular.module('myApp').directive('frameDir', function () {
     function linker(scope, element, attrs){
-        console.log(scope);
     };
     return {
         templateUrl: "js/people/tmpl/frame.html",
@@ -10,7 +9,7 @@ angular.module('myApp').directive('frameDir', function () {
         link: linker,
         scope: {
             flagname:"@",
-            mainctrl: "=",
+            pplctrl: "=",
             frameEditedFlag: "=",
             headerTittle: "@"
         }

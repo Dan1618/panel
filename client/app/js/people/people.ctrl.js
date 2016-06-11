@@ -68,15 +68,13 @@ angular.module('myApp').controller('PeopleCtrl', ['$scope', 'CountJobLocPieChart
             method: 'GET',
             url: '/getEmpList'
         }).then(function successCallback(response) {
-            console.log(response);
             vm.emps = response.data;
         }, function errorCallback(response) {
-            console.log(response);
+            console.error(response);
         });
     }
     function addEmp(newEmp){
         vm.emp = angular.copy(newEmp);
-        console.log(this);
         $http({
             method: 'POST',
             url: '/addEmp',
@@ -86,7 +84,7 @@ angular.module('myApp').controller('PeopleCtrl', ['$scope', 'CountJobLocPieChart
                 vm.emps.push(vm.emp);
             }
         }, function errorCallback(response) {
-            console.log(response);
+            console.error(response);
         });
     };  
     function removeEmp(emp){
@@ -101,10 +99,11 @@ angular.module('myApp').controller('PeopleCtrl', ['$scope', 'CountJobLocPieChart
                 vm.emps.splice(index, 1); 
             }
         }, function errorCallback(response) {
-            console.log(response);
+            console.error(response);
         });
     };
-    //confirm edition
+    
+//    //confirm edition
     function doEditEmp(emp){
         var request = { emp : emp,
                         updatedEmp : {
@@ -135,7 +134,7 @@ angular.module('myApp').controller('PeopleCtrl', ['$scope', 'CountJobLocPieChart
                 vm.jobLocBarJobs = [vm.dataChartJob];
             }
         }, function errorCallback(response) {
-            console.log(response);
+            console.error(response);
         });
     };
     function removeEmpEdited(emp){
@@ -151,7 +150,7 @@ angular.module('myApp').controller('PeopleCtrl', ['$scope', 'CountJobLocPieChart
                 vm.editFlag = false;
             }
         }, function errorCallback(response) {
-            console.log(response);
+            console.error(response);
         });
     };
     

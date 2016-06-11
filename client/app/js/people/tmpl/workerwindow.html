@@ -1,16 +1,16 @@
 
-                        <form ng-show="!mainctrl.editFlag">
+                        <form ng-show="!pplctrl.editFlag">
                             <div class="form-group">
                                 <label>Name:</label>
-                                <input ng-model="mainctrl.newEmp.name" class="form-control">
+                                <input ng-model="pplctrl.newEmp.name" class="form-control">
                             </div>
                             <div class="form-group">
                                 <label>Surname:</label>
-                                <input ng-model="mainctrl.newEmp.surname" class="form-control">
+                                <input ng-model="pplctrl.newEmp.surname" class="form-control">
                             </div>
                             <div class="form-group">
                                 <label>Job:</label>
-                                                    <select  ng-model="mainctrl.newEmp.job" ng-init="mainctrl.newEmp.job='director'"  class="form-control" >
+                                                    <select ng-model="pplctrl.newEmp.job" ng-init="pplctrl.newEmp.job='director'"  class="form-control" >
                                     <option value="director">director</option>
                                     <option value="manager">manager</option>
                                     <option value="salesman">salesman</option>
@@ -19,29 +19,29 @@
                             </div>
                             <div class="form-group">
                                 <label>Localisation:</label></br>
-                                                            <select  ng-model="mainctrl.newEmp.loc" ng-init="mainctrl.newEmp.loc='Rzeszow'"  class="form-control" >
+                                                            <select  ng-model="pplctrl.newEmp.loc" ng-init="pplctrl.newEmp.loc='Rzeszow'"  class="form-control" >
                                     <option value="Rzeszow">Rzeszow</option>
                                     <option value="Wroclaw">Wroclaw</option>
                                     <option value="Poznan">Poznan</option>
                                     <option value="Torun">Torun</option>
                                 </select>
                             </div>
-                            <button ng-click="mainctrl.clearEmpAddBox(mainctrl.newEmp)" type="button" class="btn btn-warning">Clear</button>
-                            <button ng-click="mainctrl.addEmp(mainctrl.newEmp)" type="button" class="btn btn-success">Add</button>
+                            <button ng-click="pplctrl.clearEmpAddBox(pplctrl.newEmp)" type="button" class="btn btn-warning">Clear</button>
+                            <button ng-click="pplctrl.addEmp(pplctrl.newEmp)" type="button" class="btn btn-success">Add</button>
                         </form>
 
-                        <form ng-show="mainctrl.editFlag">
+                        <form ng-show="pplctrl.editFlag">
                             <div class="form-group">
                                 <label>Name:</label></br>
-                                <input ng-model="mainctrl.editedEmp.name" class="form-control" >
+                                <input ng-model="pplctrl.editedEmp.name" class="form-control" >
                             </div>
                             <div class="form-group">
                                 <label>Surname:</label></br>
-                                <input ng-model="mainctrl.editedEmp.surname" class="form-control" >
+                                <input ng-model="pplctrl.editedEmp.surname" class="form-control" >
                             </div>
                             <div class="form-group">
                                 <label>Job:</label></br>
-                                <select  ng-model="mainctrl.editedEmp.job" ng-init="mainctrl.editedEmp.job"  class="form-control" >
+                                <select  ng-model="pplctrl.editedEmp.job" ng-init="pplctrl.editedEmp.job"  class="form-control" >
                                     <option value="director">director</option>
                                     <option value="manager">manager</option>
                                     <option value="salesman">salesman</option>
@@ -50,16 +50,16 @@
                             </div>
                             <div class="form-group">
                                 <label>Localisation:</label></br>
-                                <select  ng-model="mainctrl.editedEmp.loc" ng-init="mainctrl.editedEmp.loc"  class="form-control" >
+                                <select  ng-model="pplctrl.editedEmp.loc" ng-init="pplctrl.editedEmp.loc"  class="form-control" >
                                     <option value="Rzeszow">Rzeszow</option>
                                     <option value="Wroclaw">Wroclaw</option>
                                     <option value="Poznan">Poznan</option>
                                     <option value="Torun">Torun</option>
                                 </select>
                             </div>
-                            <button type="button" ng-click="mainctrl.cancelEmpEdit()" class="btn btn-warning">Cancel</button>
-                            <button type="button" ng-click="mainctrl.removeEmpEdited(mainctrl.emp)" class="btn btn-danger">Remove</button>
-                            <button type="button" ng-click="mainctrl.clearEmpEditBox(mainctrl.editedEmp)" class="btn btn-warning">Clear</button>
-                            <button type="button" ng-click="mainctrl.doEditEmp(mainctrl.emp)" class="btn btn-success">Edit</button>
+                            <button type="button" ng-click="pplctrl.cancelEmpEdit()" class="btn btn-warning">Cancel</button>
+                            <button type="button" ng-click="pplctrl.removeEmpEdited(pplctrl.emp)" class="btn btn-danger">Remove</button>
+                            <button type="button" ng-click="pplctrl.clearEmpEditBox(pplctrl.editedEmp)" class="btn btn-warning">Clear</button>
+                            <button type="button" ng-click="pplctrl.doEditEmp(pplctrl.emp)" class="btn btn-success">Edit</button>
                         </form>
 

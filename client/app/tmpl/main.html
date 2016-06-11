@@ -1,6 +1,6 @@
-    <div class="container-fluid sample-show-hide" ng-controller="PeopleCtrl as mainctrl">        
-        <div class="row">
 
+<div ng-if="ctrlboot.logged==='unlogged'" class="container-fluid sample-show-hide" ng-controller="PeopleCtrl as pplctrl">        
+        <div class="row">
             <div id="empList" class="col-md-6 col-sm-12 col-xs-12 col-lg-6">
 <!--
                 <a ui-sref=".empInfo">klik</a>
@@ -9,55 +9,62 @@
                 <div ui-view="" ></div>
                 <form class="filterForm form-inline">
                     <b>Filter by:</b> &nbsp;&nbsp;
-                    <select ng-model="mainctrl.empsByType" class="form-control" ng-init="mainctrl.empsByType='$'">
+                    <select ng-model="pplctrl.empsByType" class="form-control" ng-init="pplctrl.empsByType='$'">
                         <option value="$">Any</option>
                         <option value="name">Name</option>
                         <option value="surname">Surname</option>
                         <option value="job">Job</option>
                         <option value="loc">Localisation</option>
                     </select>
-                    <input ng-model="mainctrl.filterEmpsBy" class="form-control" placeholder="filter">
+                    <input ng-model="pplctrl.filterEmpsBy" class="form-control" placeholder="filter">
                 </form>
                 
                 <div class="table-responsive">
                     <table  class="table table-striped">
                         <thead>
                             <tr>
-                                <th class="pointer hovBlue" ng-click="mainctrl.orderList('name')">Name</th>
-                                <th class="pointer hovBlue" ng-click="mainctrl.orderList('surname')">Surname</th>
-                                <th class="pointer hovBlue" ng-click="mainctrl.orderList('job')">Job</th>
-                                <th class="pointer hovBlue" ng-click="mainctrl.orderList('loc')">Localisation</th>
-                                <th class="pointer hovBlue" ng-click="mainctrl.empsPredicate=''">Unsort</th>
+                                <th class="pointer hovBlue" ng-click="pplctrl.orderList('name')">Name</th>
+                                <th class="pointer hovBlue" ng-click="pplctrl.orderList('surname')">Surname</th>
+                                <th class="pointer hovBlue" ng-click="pplctrl.orderList('job')">Job</th>
+                                <th class="pointer hovBlue" ng-click="pplctrl.orderList('loc')">Localisation</th>
+                                <th class="pointer hovBlue" ng-click="pplctrl.empsPredicate=''">Unsort</th>
                             </tr>
                         </thead>
-                        <tbody ng-init = "mainctrl.findEmpList()">
+                        <tbody ng-init = "pplctrl.findEmpList()">
                             <tr 
-                                ng-repeat="emp in mainctrl.emps | filter:mainctrl.filterEmpsByFunc() | orderBy:mainctrl.empsPredicate:mainctrl.empsPredicateReverse track by $index"  
+                                ng-repeat="emp in pplctrl.emps | filter:pplctrl.filterEmpsByFunc() | orderBy:pplctrl.empsPredicate:pplctrl.empsPredicateReverse track by $index"  
                                 emp-list>
                             </tr>
                         </tbody>
                     </table>
                 </div>                
-            </div>   
+            </div>
             
             <div class="col-md-3 col-sm-12 col-xs-12 col-lg-3">
-                <div frame-edited-flag="mainctrl.editFlag" header-tittle="add new worker"  frame-dir flagname="workerwindowFlag" mainctrl="mainctrl" class="">
+                <div frame-edited-flag="pplctrl.editFlag" header-tittle="add new worker"  frame-dir flagname="workerwindowFlag" pplctrl="pplctrl" class="">
                     <div worker-window></div>
                 </div>
 
-                <div mainctrl="mainctrl" frame-dir flagname = "flowCollapseFlag" header-tittle="generating random data"  class="">
+                <div pplctrl="pplctrl" frame-dir flagname = "flowCollapseFlag" header-tittle="generating random data"  class="">
                     <div flow-chart></div>
                     <div ppl-flow-buttons></div>
                 </div>
             </div>
             
             <div class="col-md-3 col-sm-12 col-xs-12 col-lg-3">
-                <div mainctrl="mainctrl" flagname="jobLocPieFlag" header-tittle="auto updating chart" frame-dir class="">
+                <div pplctrl="pplctrl" flagname="jobLocPieFlag" header-tittle="auto updating chart" frame-dir class="">
                     <div job-loc-pie-chart></div>
                 </div>
-                <div mainctrl="mainctrl" flagname="jobLocBarFlag" header-tittle="auto updating chart" frame-dir class="">
+                <div pplctrl="pplctrl" flagname="jobLocBarFlag" header-tittle="auto updating chart" frame-dir class="">
                     <div job-loc-bar-chart></div>
                 </div>
             </div>
+        </div>
+    </div>
+    <div ng-controller="PeopleCtrl as pplctrl">
+        <div ng-if="ctrlboot.logged==='logged'">
+            <h1>logged :)</h1> <br>
+            <h1>user: {{ ctrlboot.user.email }}</h1> <br>
+            <h1>extrainfo: {{ctrlboot.user.extra}}</h1> <br>
         </div>
     </div>

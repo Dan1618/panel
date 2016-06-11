@@ -5,7 +5,7 @@ angular.module('myApp', ['ui.router', 'chart.js']).config(['$stateProvider', '$u
     $stateProvider
     .state('main', {
         url: "/main",
-        templateUrl: "tmpl/main.html",
+        templateUrl: "tmpl/main.html"
     })
     .state('statistics', {
         url: "/statistics",
@@ -19,6 +19,21 @@ angular.module('myApp', ['ui.router', 'chart.js']).config(['$stateProvider', '$u
         url: "/info",
         templateUrl: "tmpl/empInfo.html"
     })
-}]);
+    .state('signup', {
+        url: "/signup",
+        templateUrl: "tmpl/signup.html",
+        data: { auth: "forUnloggedOnly"}
+    })
+}])
+
+.run(function($rootScope, userHandleService){    
+    $rootScope.$on('$stateChangeStart', function(event, toState, toParams, fromState, fromParams){
+        var toStateVar = toState.data || false;
+        if( toStateVar && toStateVar.auth === "forUnloggedOnly" && userHandleService.user.logged === "logged" ) {
+            event.preventDefault();
+            return false;
+        }
+    })
+})
 
 angular.module('myApp').constant('URL', 'data/');
