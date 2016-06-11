@@ -10,4 +10,4 @@ FIREING UP THE APP:
 2. npm install in server folder
 3. run server.js as following: (with inspector and nodemon globally installed)
 node-inspector --web-port=5959 & nodemon --debug server.js
-(flag --web-port=5959 changes default node-inspector port, sometimes yo have to run this command with --harmony flag if you get strict mode error)
+(flag --web-port=5959 changes default node-inspector port, sometimes you have to run this command with --harmony flag if you get strict mode error)
